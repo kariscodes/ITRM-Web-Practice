@@ -1,0 +1,23 @@
+<style>
+	.h-container {
+		background-color: #d7f5ff;
+	}
+	.h-container:after{ clear: both; display: block; content: '' }
+	.h-container .item {
+		float: left;
+		width: 100px;
+		font-size: 15px;
+		text-align: center;
+		border-right: 1px solid #ddd;
+	}
+	.h-container .item.last {
+		float: right;
+		border-right: none;
+	}
+</style>
+<div class="h-container">
+	<div class="item">menu 1</div>
+	<div class="item">menu 2</div>
+	<div class="item">menu 3</div>
+	<div class="item last">login</div>
+</div>

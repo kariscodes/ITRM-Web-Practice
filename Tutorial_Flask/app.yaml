@@ -1,0 +1,22 @@
+#application: GCP Project ID
+#application: our-velocity-271006
+runtime: python37
+#env: standard
+#instance_class: F1
+#entrypoint: gunicorn -b :$PORT main:app
+#version is not used and it is generated automatically
+#it can also be manually specified by setting --version flag on command execution
+#version: 20200402t152840
+
+#runtime_config:
+#  python_version: 3
+#The following fields are not allowed in app.yaml: api_version
+#api_version: 1
+#threadsafe 요소는 표준 환경의 Python 3용으로 지원되지 않습니다.
+#threadsafe: true 
+
+#handlers:
+#- url: /.*
+#  script: auto
+
+#  libraries: [Flask, click, gunicorn, itsdangerous, Jinja2, MarkupSafe, pytz, requests, Werkzeug]

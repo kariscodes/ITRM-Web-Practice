@@ -1,0 +1,10 @@
+runtime: python37
+api_version: 1
+#threadsafe 요소는 표준 환경의 Python 3용으로 지원되지 않습니다.
+#threadsafe: true 
+handlers:
+- url: /static
+  static_dir: static
+- url: /.*
+  script: main.app
+#  libraries: [Flask, click, gunicorn, itsdangerous, Jinja2, MarkupSafe, pytz, requests, Werkzeug]

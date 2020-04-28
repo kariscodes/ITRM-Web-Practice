@@ -1,0 +1,382 @@
+<html>
+<head>
+	<style>
+	/* 
+		태그이름 { 속성1: 속성값1; 속성2: 속성값2; }
+		#아이디{ 속성1:속성값; 속성2:속성값; } 
+		.클래스명{ 속성1:속성값; 속성2:속성값 }
+	*/
+		h5 { color:#F00; }
+		h6 { color:#0F0; font-size: 20px }
+		#id_box{ background-color: #09C; width: 150px; height: 40px; }
+		.c_box{ width: 100px; height: 50px; border: 1px solid green }
+	</style>
+	<style>
+	/*
+		[부모-자식 선택자]
+		선택자1 선택자2 { 속성1:속성값; 속성2:속성값; }
+		=> 부모 태그 하위에 있는 태그에 스타일을 적용시킨다.
+	*/
+		div.yellow_box span { background-color:yellow; }
+		div#id_box span { text-align:center; padding:10px; color: green; }
+		div span.blue_span {background-color:#09C; }
+		div span#id_span { text-align:center; padding:10px; color: orange; }
+	</style>	
+</head>
+<body>
+	<h5>h5태그</h5>
+	<h6>h6태그</h6>
+	<div id="id_box">id_box 아이디</div>
+	<div class="c_box">c_box 클래스</div>
+</body>
+
+<body>
+	<div class="yellow_box">
+		<span>
+			yellow_box div 클래스 내의 span 입니다.
+		</span>
+	</div>
+	<div id="id_box">
+		<span>
+			id_box div 아이디 내의 span 입니다.
+		</span>
+	</div>
+	<div>
+		<span class="blue_span">
+			div 내의 blue_span 클래스 span 입니다.
+		</span>
+	</div>
+	<div>
+		<span id="id_span">
+			div 내의 id_span 아이디 span 입니다.
+		</span>
+	</div>
+	<div>
+		<span>
+			yellow_box div 클래스 내에 있지 않은 span 입니다.
+		</span>
+	</div>
+	<div>
+		<span>
+			c_box div 아이디 내에 있지 않은 span 입니다.
+		</span>
+	</div>
+</body>
+
+</html>
+
+
+<html>
+<head>
+<style>
+	/* 
+		다중 조건 선택자
+		선택자 여러개를 붙여 쓴다. (AND 연산)
+		=> 여러 선택자를 동시에 만족하는 태그에 스타일이 적용된다.  
+	*/
+	/* div 태그 AND #m_box 아이디 */
+	div#m_box{ width:220px; height:50px; border: 1px solid yellow; background-color:green }
+	/* div 태그 AND .box 클래스 */
+	div.box{ background-color:gray; }
+</style>
+</head>
+<body>
+	<div id="m_box">m_box 아이디의 div 입니다.</div>
+	<div class="box">box 클래스의 div 입니다.</div>
+
+	<span id="m_box">m_box 아이디의 span 입니다.</span>
+	<span class="box">box 클래스의 span 입니다.</span>
+</body>
+</html>
+
+
+<html>
+<head>
+	<style>
+		.box{
+			background-color: #09c;
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+		/*
+			가상(추상) 클래스 선택자
+			선택자 뒤에 :가상이벤트를 붙이면 특정 이벤트마다 적용 할 스타일이 설정된다.
+			
+			:link - 방문한 적이 없는 링크
+			:visited - 방문한 적이 있는 링크
+			:hover - 마우스를 롤오버 했을 때
+			:active - 마우스를 클릭했을 때
+			:focus - 포커스 되었을 때 (input 태그 등)
+			:first - 첫번째 요소
+			:last - 마지막 요소
+			:first-child - 첫번째 자식
+			:last-child - 마지막 자식
+			:nth-child(2n+1) - 홀수 번째 자식
+		*/
+		.hover-box:hover{
+			background-color: orange;
+		}
+		.focus-input:focus{
+			background: yellow;
+		}
+		.container > div{
+			margin-top: 20px;
+			width: 100px;
+			height: 100px;
+			float: left;
+			background-color: orange;
+		}
+		.container > div:nth-child(2n+1) {
+			background-color: red
+		}
+	</style>
+</head>
+<body>
+	<div class="box hover-box">
+		마우스를 올려보세요.
+	</div>
+	<input class="focus-input" type="text" value="클릭해보세요">
+	<div class="container">
+		<! div 개수만큼 만든다>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div style="clear: both"></div>
+	<br>
+</body>
+</html>
+
+
+<html>
+<body>
+	<div style="width: 150px; height: 80px; background-color: #d2f4ff; border: 2px solid #09c;">
+		150x80 Quadrangle
+	</div>
+	<div style="width: 90px; height: 120px; background-color: #fde6ff; border: 2px solid #90C;">
+		90x120 Quadrangle
+	</div>
+</body>
+</html>
+
+
+<html>
+<head>
+<style>
+/*
+	margin : 바깥쪽 여백
+	padding : 안쪽 여백
+	
+	방향마다 여백을 다르게 설정할 수 있습니다.
+
+	margin: 20px 같은 표현은 상하좌우 모두 20px을 의미합니다
+	margin: 30px 10px은 상하 30px, 좌우 10px을 의미합니다.
+	margin: 30px 10px 20px 50px은 위 30px, 오른쪽 10px, 아래 20px, 왼쪽 50px을 의미합니다.
+	margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미합니다.
+	즉 방향의 위부터 시계방향으로 회전하여 위 오른쪽 아래 왼쪽 순서로 설정합니다.
+*/
+	.box-container{
+		display: inline-block;
+		background-color: #d2f4ff;
+		border: 2px solid #09c;
+		margin: 5px 15px;
+	}
+	.box-container div{
+		width: 120px;
+		height: 80px;
+		background-color: #fde6ff;
+		border: 2px solid #90C;
+		font-size: 15px;
+	}
+	#box1{ margin: 10px;  padding: 0; }
+	#box2{ margin: 5px 25px; padding: 0; }
+	#box3{ margin: 0;  padding: 10px 30px 5px; }
+	#box4{ margin: 10px; padding: 10px 20px; }
+	#box5{ margin: 10px 30px 0 50px; padding: 30px 0 }
+</style>
+</head>
+
+<body>
+	<div class="box-container">
+		<div id="box1">m: 10<br>p: 0</div>
+	</div>
+	<div class="box-container">
+		<div id="box2">m: 5 25<br>p: 0</div>
+	</div>
+	<div class="box-container">
+		<div id="box3">m: 0<br>p: 10 30 5</div>
+	</div>
+	<div class="box-container">
+		<div id="box4">m: 10<br>p: 10 20</div>
+	</div>
+	<div class="box-container">
+		<div id="box5">m: 10 30 0 50<br>p: 30 0</div>
+	</div>
+</body>
+
+<style>
+.content-box {
+    box-sizing: content-box;	/* default value */
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid black;
+    background-color: white;
+}
+.content-box .child{
+    width: 200px;
+    background-color: #ddd;
+}
+</style>
+<div class="content-box">
+    <div class="child">200px child</div>
+</div>
+
+<style>
+.border-box {
+    box-sizing: border-box;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid black;
+    background-color: white;
+}
+.border-box .child{
+    width: 200px;
+    background-color: #ddd;
+}
+</style>
+<div class="border-box">
+    <div class="child">200px child</div>
+</div>
+
+</html>
+
+<html>
+<head>
+<style>
+/* 
+	Color 
+	- red, blue등 이미 정의된 색
+	- #000, #FFFFFF 등의 16진수 색상 코드
+	- rgb(255, 255, 255) 등의 rgb 색상
+	- rgba(200, 100, 150, 0.5) 등의 알파(투명도)가 적용된 rgba 색상
+*/
+</style>
+</head>
+<body>
+	<br>
+	<div style="color: red">text1</div>
+	<div style="color: #0A0">text2</div>
+	<div style="color: rgb(0, 0, 150)">text3</div>
+	<div style="color: rgba(0, 140, 170, 0.5)">text4</div>
+	<br>
+</body>
+</html>
+
+
+
+<html>
+<head>
+	<style>
+		/* 
+			[Font]
+			font-style	이탤릭체 등의 글꼴의 스타일 지정
+			font-weight	글자 두께
+			font-variant	글꼴 변형 (소문자를 대문자로 바꾸는 등의)
+			font-size	글자 크기
+			line-height	줄 간격
+			font-family	글꼴 (굴림, 돋움, …)
+			
+			font 속성은 다음과 같은 순서로 세부 속성을 한번에 기술합니다.
+			font: font-style font-variant font-weight font-size/line-height font-family
+			
+			font-weight: 100 ~ 900 사이, 100단위로 지정
+			(미리 지정된 값 => 100: lighter, 400: normal, 700: bold, 900: bolder)
+		*/		
+		#text1 { font-weight: 900; font-size: 37px }
+		#text2 { font-size: 28px }
+		#text3 { font-size: 19px }
+
+		.bold { font-weight: bold; font-size: 50px }
+		.italic{ font-style: italic }
+		.gungseo{ font-family: "궁서" }
+
+		#text4{ font: italic bold 20px serif; }
+   </style>
+</head>
+<body>
+	<div id="text1">이 글자 크기는 37px</div>
+	<div id="text2">이 글자 크기는 28px</div>
+	<div id="text3">이 글자 크기는 19px</div>
+	<br>
+	<div class="bold">이 글씨는 굵은 글씨</div>
+	<div class="italic">이 글씨는 기울인 글</div>
+	<div class="gungseo">여기 글꼴은 궁서체</div>
+	<br>
+	<div id="text4">There's no books on my backpack</div>
+</body>
+</html>
+
+
+<html>
+<head>
+<style>
+	/* 텍스트 정렬(text-align), 배경색(background-color) */
+	#atext1 { text-align: right; background-color: green }
+	#atext2 { text-align: left; background-color: #FF00CC; width: 200px }
+	#atext3 { text-align: center; background-color: yellow }
+</style>
+</head>
+<body>
+	<div id="atext1">오른쪽 정렬</div>
+	<div id="atext2">왼쪽 정렬</div>
+	<div id="atext3">중앙 정렬</div>
+</body>
+</html>
+
+<html>
+<style>
+	/* 
+		특별한 점은 컨테이너의 크기와 상관없이 삽입된 background-image의 크기는 컨테이너에 맞춰 늘어나거나 줄어들지 않고 그대로 표시되며,
+		이미지 보다 컨테이너가 더 크다면 이미지는 반복되어 표시되게 됩니다.
+	*/
+	#box2-0 {
+		width: 450px;
+		height: 110px;
+		background-image: url("./images/dse_logo.jpg");
+		border: 2px solid #90C;
+	}	
+	#box2-1 {
+		width: 100px;
+		height: 100px;
+		background-image: url("./images/dse_logo.jpg");
+		border: 2px solid #90C;
+	}
+	#box2-2{
+		width: 300px;
+		height: 150px;
+		margin-top: 30px;
+		background-image: url("./images/dse_logo.jpg");
+		border: 2px solid #90C;
+	}
+	#box2-3{
+		width: 390px;
+		height: 260px;
+		margin-top: 30px;
+		background-image: url("./images/smile.gif");
+		border: 1px solid #AAA;
+	}	
+</style>
+<body>
+	<br>
+	<div id="box2-0"></div>	
+	<div id="box2-1"></div>
+	<div id="box2-2"></div>
+	<div id="box2-3"></div>	
+	<br>
+</body>
+</html>
+
+

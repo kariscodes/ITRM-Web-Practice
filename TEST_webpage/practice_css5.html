@@ -1,0 +1,47 @@
+<style>
+	.box-container{
+		width: 500px;
+		border: 2px solid #09c;
+		background-color: #d7f5ff;
+	}
+	.box-container .box{
+		width: 80px;
+		height: 40px;
+		border: 2px solid red;
+		background-color: #ffe7d5;
+	}
+	.float-container img{
+		float: left; 
+		margin: 5px; 
+		padding: 5px; 
+		border: 2px solid #90C; 
+	}
+	.clearfix:after{
+		content: ""; display: block; clear: both
+	}
+	#below-text {
+		text-align: left;
+	}
+	
+</style>
+<! TEST 1>
+<div class="box-container">
+	<div class="box" style="float: left">박스1</div>
+	<div class="box" style="float: right">박스2</div>
+</div>
+<div><center>박스 아래에 나타나야 하는 내용</center></div>
+<br>
+<! TEST 2>
+<div class="box-container">
+	<img src="./images/sideBan02.jpg" style="float: left">
+	<img src="./images/sideBan02.jpg" style="float: right">	
+	<div style="clear: both"></div>
+</div>
+<div id="below-text">박스 아래에 나타나야 하는 내용</div>
+<br>
+<! TEST 3>
+<div class="box-container clearfix">
+	<div class="box" style="float: left">박스1</div>
+	<div class="box" style="float: right">박스2</div>
+</div>
+<div>박스 아래에 나타나야 하는 내용</div>	

@@ -1,0 +1,91 @@
+<html>
+<head>
+	<title>
+		HTML 기본 연습
+	</title>
+	
+	<! 	
+		meta 태그는 웹 페이지의 보이지 않는 정보를 제공하는데 쓰이는 태그입니다.
+		페이지의 설명 요약, 핵심 키워드, 제작자, 크롤링 정책 등 수많은 정보를 제공할 수 있습니다.
+		meta 태그는 닫는 태그가 없는 태그로, 태그의 속성을 통해 정보를 제공합니다.
+		검색 엔진은 이런 정보를 적극적으로 활용합니다.
+		meta 태그를 이용하여 description, keywords, author, subject, classification 등의 정보를 표기할 수 있으며,
+		검색 엔진은 이런 정보를 적극적으로 활용합니다.
+	>
+	<meta name="Practice" content="<p>HTML과 CSS에 대해 알아봅시다">
+	
+	<style>
+		.box-container{
+			border: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<table class="box-container">
+		<tr>
+			<td>Line1-섹션1</td>
+			<td>Line1-섹션2</td>
+		</tr>
+		<tr>
+			<td>Line2-섹션3</td>
+			<td>Line2-섹션4</td>
+		</tr>
+		<tr>
+			<td>Line3-섹션4</td>
+			<td>Line3-섹션5</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+<html>
+	<body>
+		<! 리스트(List) 태그 'li'
+		   이 태그는 ol 또는 ul 태그와 같이 쓰인다.
+			ol 태그: Ordered List (번호 목록)
+			ul 태그: Unordered List
+		>
+		<ol>
+			<li>목록1</li>
+			<li>목록2</li>
+		</ol>
+
+		<ul>
+			<li>목록1</li>
+			<li>목록2</li>
+			<li>목록3</li>
+			<ol>
+				<li>목록3-1</li>
+				<li>목록3-2</li>
+			</ol>
+		</ul>
+	</body>
+</html>
+
+<html>
+폼(Form) 태그 테스트입니다.
+<form>
+	<p>
+		<strong>아이디</strong>
+		<input type="text" name="name" value="아이디 입력">
+	</p>
+	<p>
+		<strong>비밀번호</strong>
+		<input type="password" name="password" value="비밀번호 입력">
+	</p>
+	<p>
+		<strong>성별</strong>
+		<input type="radio" name="gender" value="M">남자
+		<input type="radio" name="gender" value="F">여자
+	</p>
+	<p>
+		<strong>응시분야</strong>
+		<input type="checkbox" name="part" value="eng">영어
+		<input type="checkbox" name="part" value="math">수학
+	</p>
+	<p>
+		<input type="submit" value="제출">
+	</p>
+</form>
+</html>

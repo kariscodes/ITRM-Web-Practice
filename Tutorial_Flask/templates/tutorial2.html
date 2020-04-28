@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial: Flask Web Application</title>
+</head>
+<body>
+    <h3>Tutorial: Flask Web Application - Input Box</h3>
+    <form action="" method="POST">
+        <input type="text" placeholder="Input username" name="username">
+        <input type="password" placeholder="Input Password" name="password">
+        <input type="submit" value="LOGIN">
+    </form>
+    {% if error %}
+        <p><strong>Invalid error: </strong>{{ error }}</p>
+    {% endif %}
+    <p><input type="button" value="HOME으로 이동" onclick="location.href='../../'"></p>
+</body>
+</html>

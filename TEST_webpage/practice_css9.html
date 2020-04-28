@@ -1,0 +1,59 @@
+<style>
+	.clearfix { clear: both; content: ''; display: block }
+
+	.my-site {
+		background-color: white;
+	}
+	.my-site .header {
+		background-color: #01579B;
+		height: 70px;
+	}
+	.my-site .gnb {
+		border-bottom: 1px solid #ddd;
+	}
+	.my-site .gnb > div {
+		float: left;
+		width: 100px;
+		text-align: center;
+		height: 30px; 
+		border-right: 1px solid #ddd;
+	}
+	.my-site .gnb > div.selected {
+		background: #70acdc;
+	}
+	.my-site .main .lnb {
+		float: left;
+		width: 25%;
+		background-color: #a3a3a3;
+		height: 300px;
+	}
+	.my-site .main .article {
+		float: left;
+		width: 75%;
+		background-color: yellow;
+	}
+	.my-site .footer {
+		background-color: gray;
+		border-top: 1px solid #ddd;
+		height: 40px;
+	}
+</style>
+<div class="my-site">
+	<div class="header"></div>
+	<div class="gnb clearfix">
+		<div></div>
+		<div class="selected"></div>
+		<div></div>
+	</div>
+	<div class="main clearfix">
+		<div class="lnb"></div>
+		<div class="article">
+			<p>
+				여기가 Article<br>
+				본문 내용이 담기는 곳<br>
+				글이 길 수도 있겠다.
+			</p>
+		</div>
+	</div>
+	<div class="footer">맨 아래</div>
+</div>

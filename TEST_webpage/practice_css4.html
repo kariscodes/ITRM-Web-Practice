@@ -1,0 +1,22 @@
+<html>
+<head>
+<style>
+	.float-container{ width: 320px; border: 2px solid #09c; font-size: 13px; }
+	.float-container img{ float: left; margin: 5px; padding: 5px; border: 2px solid #90C; }
+</style>
+</head>
+<body>
+	<div class="float-container">
+		<img src="./images/sideBan02.jpg">
+		<p>This is first line with floating image.</p>
+		<!
+			float 속성을 통해 태그를 부유시킨 이후 문서의 흐름을 제거하기 위해 쓰입니다.
+			방향에 따라 3가지 속성을 사용할 수 있습니다.
+		 		left: 좌측 부유 제거
+		 		right: 우측 부유 제거
+		 		both: 양쪽 모두 제거
+		>
+		<p style="clear: both">This is second line with cleared property.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<style>
+		.box-container{
+			width: 350px;
+			border: 2px solid #e91bf5;
+		}
+		.box-container div{
+			padding: 10px;
+			border: 1px solid green;
+			background-color: #e3ffe0;
+		}
+		#box1 { position: static; top: 30px; left: 50px; }
+		#box2 { position: relative; top: 30px; left: 50px; }
+		#box3 { position: absolute; top: 30px; right: 50px; }
+		#box4 { position: fixed; top: 30px; right: 50px; }
+	</style>
+</head>
+<body>
+	<div class="box-container">
+		<div id="box1">static 박스</div>
+		<div id="box2">relative 박스</div>
+		<div id="box3">absolute 박스</div>
+		<div id="box4">fixed 박스</div> <!-- '출력 결과' 란이 아닌, 전체 페이지에서 고정되어 보여짐 -->
+	</div>
+</body>
+</html>
